@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FCYoutube</string>
+    <string name="sub_title_video_info">%s ・ 조회수 %s ・ %s</string>
 </resources>
