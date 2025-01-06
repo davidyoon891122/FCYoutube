@@ -20,7 +20,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        videoAdapter = VideoAdapter(context = this)
+        videoAdapter = VideoAdapter(context = this) { videoItem ->
+            binding.motionLayout.setTransition(R.id.collapse, R.id.expand)
+            binding.motionLayout.transitionToEnd()
+        }
+
+        binding.motionLayout.jumpToState(R.id.collapse)
 
         binding.videoListRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
