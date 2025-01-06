@@ -7,6 +7,13 @@
         motion:constraintSetStart="@id/collapse"
         motion:duration="300"
         motion:motionInterpolator="linear">
+
+        <OnSwipe
+            motion:touchAnchorId="@id/videoPlayerContainer" />
+        <OnClick motion:targetId="@id/videoPlayerContainer"
+            motion:clickAction="transitionToEnd"
+            />
+
         <KeyFrameSet>
             <KeyPosition
                 motion:curveFit="linear"
@@ -32,13 +39,6 @@
                 motion:motionTarget="@+id/controlButton" />
         </KeyFrameSet>
     </Transition>
-
-
-    <Transition
-        motion:constraintSetEnd="@+id/expand"
-        motion:constraintSetStart="@+id/collapse"
-        motion:duration="300"
-        motion:motionInterpolator="linear" />
 
     <ConstraintSet android:id="@+id/expand">
         <Constraint
