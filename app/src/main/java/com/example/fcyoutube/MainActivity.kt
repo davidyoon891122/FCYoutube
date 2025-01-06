@@ -29,5 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         val videoList = readData("videos.json", VideoList::class.java) ?: VideoList(emptyList())
         videoAdapter.submitList(videoList.videos)
+
+        binding.playerRecyclerView
     }
 }
